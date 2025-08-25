@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+</div>
+</div>
+<div>
+<label class="block text-sm mb-1">Nội dung</label>
+<textarea name="message" rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900" required></textarea>
+</div>
+<div class="flex items-center justify-between gap-3">
+<small class="text-gray-500">* Bản demo: form không gửi đi máy chủ.</small>
+<button type="submit" class="px-5 py-3 rounded-2xl bg-gray-900 text-white hover:bg-gray-800">Gửi liên hệ</button>
+</div>
+</form>
+
+
+<div id="formToast" class="hidden mt-4 p-4 rounded-xl border text-sm"></div>
+</div>
+</section>
+
+
+<!-- Footer -->
+<footer class="py-10 border-t border-gray-100 text-sm bg-white">
+<div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+<div>© <span id="year"></span> Web Mẫu. All rights reserved.</div>
+<div class="flex items-center gap-4">
+<a href="#" class="hover:underline">Điều khoản</a>
+<a href="#" class="hover:underline">Chính sách</a>
+</div>
+</div>
+</footer>
+
+
+<!-- Scripts -->
+<script>
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const mobileNav = document.getElementById('mobileNav');
+menuBtn?.addEventListener('click', () => {
+mobileNav.classList.toggle('hidden');
+});
+
+
+// Year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+// Demo form submit (no backend)
+const form = document.getElementById('contactForm');
+const toast = document.getElementById('formToast');
+form?.addEventListener('submit', (e) => {
+e.preventDefault();
+const data = Object.fromEntries(new FormData(form).entries());
+// Simple validation example
+if (!data.name || !data.email || !data.message) {
+toast.className = 'mt-4 p-4 rounded-xl border text-sm bg-red-50 border-red-200 text-red-700';
+toast.textContent = 'Vui lòng điền đủ thông tin.';
+toast.classList.remove('hidden');
+return;
+}
+toast.className = 'mt-4 p-4 rounded-xl border text-sm bg-green-50 border-green-200 text-green-700';
+toast.textContent = 'Đã nhận thông tin (demo). Bạn có thể kết nối backend sau này!';
+toast.classList.remove('hidden');
+form.reset();
+});
+</script>
+</body>
+</html>
