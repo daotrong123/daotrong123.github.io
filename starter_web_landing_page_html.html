@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang Web Mẫu – Doanh Nghiệp</title>
+  <meta name="description" content="Landing page mẫu, hiện đại, responsive. Có phần giới thiệu, tính năng, bảng giá và liên hệ." />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-2xl bg-gray-900 text-white font-bold">W</span>
+          <span class="font-semibold">Web Mẫu</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#features" class="hover:text-gray-900">Tính năng</a>
+          <a href="#pricing" class="hover:text-gray-900">Bảng giá</a>
+          <a href="#contact" class="hover:text-gray-900">Liên hệ</a>
+          <a href="#cta" class="px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-gray-800 transition">Bắt đầu</a>
+        </nav>
+        <button id="menuBtn" aria-label="Mở menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#features" class="py-2">Tính năng</a>
+        <a href="#pricing" class="py-2">Bảng giá</a>
+        <a href="#contact" class="py-2">Liên hệ</a>
+        <a href="#cta" class="py-2 px-3 rounded-xl bg-gray-900 text-white w-max">Bắt đầu</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight">Xây trang web nhanh, <span class="text-gray-900">đẹp</span> và <span class="text-gray-900">chuẩn SEO</span></h1>
+        <p class="mt-4 text-gray-600">Mẫu landing page hiện đại, tối ưu trên di động. Tùy biến logo, màu sắc, nội dung chỉ trong vài phút.</p>
+        <div id="cta" class="mt-6 flex items-center gap-3">
+          <a href="#contact" class="px-5 py-3 rounded-2xl bg-gray-900 text-white hover:bg-gray-800 transition">Liên hệ tư vấn</a>
+          <a href="#features" class="px-5 py-3 rounded-2xl border border-gray-300 hover:bg-white transition">Xem tính năng</a>
+        </div>
+        <div class="mt-6 text-xs text-gray-500">Không cần backend để chạy bản mẫu này. Chỉ mở file <code>index.html</code> trong trình duyệt.</div>
+      </div>
+      <div class="relative">
+        <div class="aspect-video rounded-3xl border border-gray-200 shadow-sm bg-white p-4">
+          <div class="w-full h-full rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-gray-500">
+            <div class="text-center">
+              <div class="text-sm">Ảnh/Mockup sản phẩm</div>
+              <div class="text-xs">(thay bằng hình thực tế của bạn)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Tính năng nổi bật</h2>
+      <p class="mt-2 text-gray-600">Các điểm mạnh giúp website của bạn khác biệt.</p>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+          <h3 class="font-medium">Hiệu năng nhanh</h3>
+          <p class="mt-2 text-sm text-gray-600">Tối ưu tải nhanh, điểm Lighthouse cao, trải nghiệm mượt.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+          <h3 class="font-medium">Chuẩn SEO</h3>
+          <p class="mt-2 text-sm text-gray-600">Thẻ meta, cấu trúc heading, sitemap dễ dàng tích hợp.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+          <h3 class="font-medium">Responsive</h3>
+          <p class="mt-2 text-sm text-gray-600">Hiển thị đẹp trên di động, tablet và desktop.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+          <h3 class="font-medium">Dễ tùy biến</h3>
+          <p class="mt-2 text-sm text-gray-600">Đổi màu, font, bố cục nhanh chóng bằng class Tailwind.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+          <h3 class="font-medium">Bảo mật cơ bản</h3>
+          <p class="mt-2 text-sm text-gray-600">Khuyến nghị cấu hình HTTPS, header bảo mật khi deploy.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+          <h3 class="font-medium">Hỗ trợ mở rộng</h3>
+          <p class="mt-2 text-sm text-gray-600">Dễ tích hợp form, analytics, chat widget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Bảng giá tham khảo</h2>
+      <p class="mt-2 text-gray-600">Có thể điều chỉnh theo nhu cầu thực tế.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Starter -->
+        <div class="p-6 bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col">
+          <h3 class="text-lg font-medium">Starter</h3>
+          <div class="mt-2 text-3xl font-bold">$0</div>
+          <p class="text-sm text-gray-600">Mẫu HTML tĩnh</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li>• 1 trang (landing)</li>
+            <li>• Responsive</li>
+            <li>• Hướng dẫn deploy</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-xl bg-gray-900 text-white text-center">Dùng bản mẫu</a>
+        </div>
+        <!-- Pro -->
+        <div class="p-6 bg-gray-900 text-white rounded-2xl border border-gray-800 shadow-sm flex flex-col">
+          <h3 class="text-lg font-medium">Pro</h3>
+          <div class="mt-2 text-3xl font-bold">$199</div>
+          <p class="text-sm text-gray-300">Tùy biến thương hiệu</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-100/90">
+            <li>• 3–5 trang nội dung</li>
+            <li>• Hiệu ứng & biểu mẫu</li>
+            <li>• Tối ưu SEO cơ bản</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-xl bg-white text-gray-900 text-center">Đặt làm</a>
+        </div>
+        <!-- Business -->
+        <div class="p-6 bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col">
+          <h3 class="text-lg font-medium">Business</h3>
+          <div class="mt-2 text-3xl font-bold">$499+</div>
+          <p class="text-sm text-gray-600">Theo yêu cầu</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li>• 5–10 trang</li>
+            <li>• Tùy chỉnh tính năng</li>
+            <li>• Tích hợp form/GSheets/CRM</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-xl bg-gray-900 text-white text-center">Nhận báo giá</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Liên hệ</h2>
+      <p class="mt-2 text-gray-600">Điền thông tin, chúng tôi sẽ phản hồi sớm nhất.</p>
+
+      <form id="contactForm" class="mt-8 grid gap-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm mb-1">Họ tên</label>
+            <input type="text" name="name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Email</label>
+            <input type="email" name="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900" required />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Nội dung</label>
+          <textarea name="message" rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900" required></textarea>
+        </div>
+        <div class="flex items-center justify-between gap-3">
+          <small class="text-gray-500">* Bản demo: form không gửi đi máy chủ.</small>
+          <button type="submit" class="px-5 py-3 rounded-2xl bg-gray-900 text-white hover:bg-gray-800">Gửi liên hệ</button>
+        </div>
+      </form>
+
+      <div id="formToast" class="hidden mt-4 p-4 rounded-xl border text-sm"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-gray-100 text-sm bg-white">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>© <span id="year"></span> Web Mẫu. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:underline">Điều khoản</a>
+        <a href="#" class="hover:underline">Chính sách</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Demo form submit (no backend)
+    const form = document.getElementById('contactForm');
+    const toast = document.getElementById('formToast');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      // Simple validation example
+      if (!data.name || !data.email || !data.message) {
+        toast.className = 'mt-4 p-4 rounded-xl border text-sm bg-red-50 border-red-200 text-red-700';
+        toast.textContent = 'Vui lòng điền đủ thông tin.';
+        toast.classList.remove('hidden');
+        return;
+      }
+      toast.className = 'mt-4 p-4 rounded-xl border text-sm bg-green-50 border-green-200 text-green-700';
+      toast.textContent = 'Đã nhận thông tin (demo). Bạn có thể kết nối backend sau này!';
+      toast.classList.remove('hidden');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
